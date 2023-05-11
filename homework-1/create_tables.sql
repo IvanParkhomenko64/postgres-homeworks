@@ -19,8 +19,8 @@ create table employees
 create table orders
 (
 	order_id int primary key,
-	customer_id varchar(100) REFERENCES customers(customer_id) NOT NULL
-	employee_id int REFERENCES customers(employees) NOT NULL,
+	customer_id varchar(100) REFERENCES customers(customer_id),
+	employee_id int REFERENCES employees(employee_id),
 	order_date varchar(100),
 	ship_city varchar(100)
 );
